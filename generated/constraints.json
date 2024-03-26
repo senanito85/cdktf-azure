@@ -1,0 +1,8 @@
+{
+  "cdktf": "0.20.4",
+  "providers": {
+    "azurerm": "~> 2",
+    "naming": "0.1.1",
+    "nullmodule": "2.0.2"
+  }
+}

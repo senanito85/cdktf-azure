@@ -1,0 +1,157 @@
+{
+  "//": {
+    "metadata": {
+      "backend": "local",
+      "stackName": "cdktf-azure-go",
+      "version": "0.20.5"
+    },
+    "outputs": {
+      "cdktf-azure-go": {
+        "names": "names"
+      }
+    }
+  },
+  "module": {
+    "null": {
+      "//": {
+        "metadata": {
+          "path": "cdktf-azure-go/null",
+          "uniqueId": "null"
+        }
+      },
+      "source": "vancluever/module/null",
+      "trigger": "one",
+      "version": "2.0.2"
+    }
+  },
+  "output": {
+    "names": {
+      "value": [
+        "${azurerm_linux_virtual_machine.test_vm.name}",
+        "${azurerm_resource_group.test_rg.name}",
+        "${module.null.null_resource_id}"
+      ]
+    }
+  },
+  "provider": {
+    "azurerm": [
+      {
+        "features": {
+        }
+      }
+    ]
+  },
+  "resource": {
+    "azurerm_linux_virtual_machine": {
+      "test_vm": {
+        "//": {
+          "metadata": {
+            "path": "cdktf-azure-go/test_vm",
+            "uniqueId": "test_vm"
+          }
+        },
+        "admin_ssh_key": [
+          {
+            "public_key": "${file(\"~/.ssh/id_rsa.pub\")}",
+            "username": "glados"
+          }
+        ],
+        "admin_username": "adminuser",
+        "location": "${azurerm_resource_group.test_rg.location}",
+        "name": "test-vm",
+        "network_interface_ids": [
+          "${azurerm_network_interface.test_vm_nic.id}"
+        ],
+        "os_disk": {
+          "caching": "ReadWrite",
+          "storage_account_type": "Standard_LRS"
+        },
+        "resource_group_name": "${azurerm_resource_group.test_rg.name}",
+        "size": "Standard_F2",
+        "source_image_reference": {
+          "offer": "UbuntuServer",
+          "publisher": "Canonical",
+          "sku": "16.04-LTS",
+          "version": "latest"
+        }
+      }
+    },
+    "azurerm_network_interface": {
+      "test_vm_nic": {
+        "//": {
+          "metadata": {
+            "path": "cdktf-azure-go/test_vm_nic",
+            "uniqueId": "test_vm_nic"
+          }
+        },
+        "ip_configuration": [
+          {
+            "name": "internal",
+            "private_ip_address_allocation": "Dynamic",
+            "subnet_id": "${azurerm_subnet.test_vm_nw_sn.id}"
+          }
+        ],
+        "location": "${azurerm_resource_group.test_rg.location}",
+        "name": "test-vm-nic",
+        "resource_group_name": "${azurerm_resource_group.test_rg.name}"
+      }
+    },
+    "azurerm_resource_group": {
+      "test_rg": {
+        "//": {
+          "metadata": {
+            "path": "cdktf-azure-go/test_rg",
+            "uniqueId": "test_rg"
+          }
+        },
+        "location": "australiasoutheast",
+        "name": "test-rg-sanan"
+      }
+    },
+    "azurerm_subnet": {
+      "test_vm_nw_sn": {
+        "//": {
+          "metadata": {
+            "path": "cdktf-azure-go/test_vm_nw_sn",
+            "uniqueId": "test_vm_nw_sn"
+          }
+        },
+        "address_prefixes": [
+          "10.0.2.0/24"
+        ],
+        "name": "test-vm-nw-sn",
+        "resource_group_name": "${azurerm_resource_group.test_rg.name}",
+        "virtual_network_name": "${azurerm_virtual_network.test_vm_nw.name}"
+      }
+    },
+    "azurerm_virtual_network": {
+      "test_vm_nw": {
+        "//": {
+          "metadata": {
+            "path": "cdktf-azure-go/test_vm_nw",
+            "uniqueId": "test_vm_nw"
+          }
+        },
+        "address_space": [
+          "10.0.0.0/16"
+        ],
+        "location": "${azurerm_resource_group.test_rg.location}",
+        "name": "test-vm-nw",
+        "resource_group_name": "${azurerm_resource_group.test_rg.name}"
+      }
+    }
+  },
+  "terraform": {
+    "backend": {
+      "local": {
+        "path": "/Users/sananibrahimov/wxrepos/azure-cdktf/terraform.cdktf-azure-go.tfstate"
+      }
+    },
+    "required_providers": {
+      "azurerm": {
+        "source": "azurerm",
+        "version": "3.97.1"
+      }
+    }
+  }
+}

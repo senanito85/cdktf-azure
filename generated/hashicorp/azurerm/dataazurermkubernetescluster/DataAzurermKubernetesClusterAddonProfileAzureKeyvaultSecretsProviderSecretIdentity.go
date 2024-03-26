@@ -1,0 +1,6 @@
+package dataazurermkubernetescluster
+
+
+type DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentity struct {
+}
+

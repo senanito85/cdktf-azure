@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package kubernetescluster
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (k *jsiiProxy_KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference) validateSetInternalValueParameters(val *KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentity) error {
+	return nil
+}
+
+func (j *jsiiProxy_KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewKubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
+	return nil
+}
+

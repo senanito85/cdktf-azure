@@ -1,0 +1,14 @@
+{
+  "version": "0.20.5",
+  "stacks": {
+    "cdktf-azure-go": {
+      "name": "cdktf-azure-go",
+      "constructPath": "cdktf-azure-go",
+      "workingDirectory": "stacks/cdktf-azure-go",
+      "synthesizedStackPath": "stacks/cdktf-azure-go/cdk.tf.json",
+      "stackMetadataPath": "stacks/cdktf-azure-go/metadata.json",
+      "annotations": [],
+      "dependencies": []
+    }
+  }
+}
